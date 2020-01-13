@@ -38,6 +38,10 @@
     overflow-x: scroll;
 }
 
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
 .card {
     min-width: 300px;
     max-width: 400px;
@@ -45,14 +49,29 @@
     position: relative;
 }
 
-.fake-card {
-    width: 24px;
-    margin-right: 24px;
-    position: relative;
-    min-height: 300px;
-    background-color: aqua;
-}
-
 .card-image {
     width: 100%;
+    border-radius: 10px;
+}
+
+.blurred { 
+    filter: blur(5px);
+}
+
+.card-hover {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    transition-property: opacity,visibility;
+    padding: 30px;
+    z-index: 2;
+    white-space: normal;
+    border-radius: 10px;
+    cursor: default;
+    color: white;
 }
