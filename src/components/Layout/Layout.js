@@ -28,13 +28,13 @@ export default class Layout extends Component {
             backdrop = <Backdrop click={this.backdropClickHandler} />
         }
         return (
-            <div style={{ height: '100%' }}>
+            <div>
                 <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
                 <SideDrawer show={this.state.sideDrawerOpen} />
                 {
                     backdrop
                 }
-                <main style={{marginTop: '64px'}}>
+                <main style={{margin: 'auto', marginTop: '64px',  maxWidth: '1440px'}}>
                     {
                         this.props.children
                     }

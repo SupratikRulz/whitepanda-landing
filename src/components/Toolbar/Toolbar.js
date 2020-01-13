@@ -2,6 +2,7 @@ import React from 'react'
 
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 
+import Logo from '../../images/logo.svg'
 import './Toolbar.css'
 
 export default function Toolbar(props) {
@@ -11,7 +12,7 @@ export default function Toolbar(props) {
                 <div className="toolbar-toggle-button">
                     <DrawerToggleButton click={props.drawerClickHandler} />
                 </div>
-                <div className="toolbar-logo"><a href="/">Logo</a></div>
+                <div className="toolbar-logo"><a href="/"><img src={Logo}/></a></div>
                 <div className="spacer" />
                 <div className="toolbar-navigation-items">
                     <ul>
