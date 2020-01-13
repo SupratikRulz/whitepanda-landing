@@ -1,8 +1,8 @@
 .section {
     display: block;
-    width: 100%;
     z-index: 10;
     text-align: center;
+    overflow: hidden;
 }
 
 .hero-img-section {
@@ -30,4 +30,29 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.card {
+    min-width: 300px;
+    max-width: 400px;
+    margin-right: 24px;
+    position: relative;
+}
+
+.fake-card {
+    width: 24px;
+    margin-right: 24px;
+    position: relative;
+    min-height: 300px;
+    background-color: aqua;
+}
+
+.card-image {
+    width: 100%;
 }

@@ -20,3 +20,7 @@ h3 {
     font-size: 18px;
     line-height: 32px;
 }
+
+.pbox-32 {
+    padding: 32px;
+}

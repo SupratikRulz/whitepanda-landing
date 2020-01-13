@@ -1,5 +1,7 @@
 import React from 'react'
 
+import cardConfig from './card-config'
+
 import HeroImage from '../../../images/hero-img.svg'
 
 import './Home.css'
@@ -7,7 +9,7 @@ import './Home.css'
 export default function Home() {
     return (
         <div>
-            <section className="section">
+            <div className="section">
                 <div className="hero-img-section">
                     <img src={HeroImage} className="hero-img"/>
                     <div className="centered">
@@ -16,7 +18,22 @@ export default function Home() {
                         <button>Get Started</button>
                     </div>
                 </div>
-            </section>
+            </div>
+            <div className="section pbox-32">
+                <div className="card-container">
+                    {
+                        cardConfig.map(content => (
+                            <div className="card">
+                                <img src={content.img} className="card-image" />
+                            </div>
+                        ))
+                    }
+                    <div className="fake-card">
+                        {' '}
+                    </div>
+
+                </div>
+            </div>
         </div>
     )
 }
